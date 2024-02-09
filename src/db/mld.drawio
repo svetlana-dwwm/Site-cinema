@@ -1,0 +1,94 @@
+<mxfile host="65bd71144e">
+    <diagram id="eayTeLWFLCBdtZJex9K2" name="Page-1">
+        <mxGraphModel dx="754" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="movies" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="135" y="160" width="200" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="id INT&lt;br&gt;title&amp;nbsp;VARCHAR(500)&amp;nbsp;&lt;br&gt;date&amp;nbsp;DATE&amp;nbsp;&lt;br&gt;duration&amp;nbsp;TINYINT&lt;br&gt;synopsis&amp;nbsp;TEXT&lt;br&gt;casting&amp;nbsp;VARCHAR(500)&lt;br&gt;direction&amp;nbsp;VARCHAR(255)&lt;br&gt;notepress&amp;nbsp;DECIMAL&lt;br&gt;poster&amp;nbsp;VARCHAR (100)&lt;br&gt;trailer&amp;nbsp;VARCHAR (100)&lt;br&gt;soft_delete BOOLEAN&lt;br&gt;created DATETIME&lt;br&gt;updated DATETIME" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="2" vertex="1">
+                    <mxGeometry x="25" y="20" width="160" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="categories" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+                    <mxGeometry x="615" y="160" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="id INT&lt;br&gt;name&amp;nbsp;VARCHAR(100)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="7" vertex="1">
+                    <mxGeometry x="20" y="30" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Users" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="390" width="180" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="id INT&lt;br&gt;nickname&amp;nbsp;VARCHAR(50)&lt;br&gt;pwd&amp;nbsp;TINYINT&lt;br&gt;email&amp;nbsp;VARCHAR(100)&lt;br&gt;age TINYINT&lt;br&gt;rgpd&amp;nbsp;BOOLEAN&lt;br&gt;newsletters&amp;nbsp;BOOLEAN&lt;br&gt;cgu&amp;nbsp;BOOLEAN&lt;br&gt;role* INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="12" vertex="1">
+                    <mxGeometry x="20" y="30" width="160" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Role" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="585" y="390" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="id INT&lt;br&gt;name&amp;nbsp;VARCHAR(12)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
+                    <mxGeometry x="20" y="30" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" style="edgeStyle=none;html=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="135" y="190" as="targetPoint"/>
+                        <mxPoint x="135" y="490" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="95" y="490"/>
+                            <mxPoint x="95" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="345" y="430" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="315" y="498"/>
+                            <mxPoint x="315" y="450"/>
+                            <mxPoint x="315" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="Comments" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="135" y="400" width="145" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="id INT&lt;br&gt;comment TEXT&lt;br&gt;movie* INT&lt;br&gt;user* INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="22" vertex="1">
+                    <mxGeometry x="15" y="40" width="110" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="37" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="615" y="200" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="595" y="260"/>
+                            <mxPoint x="595" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="37" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="335" y="200" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="355" y="240"/>
+                            <mxPoint x="355" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="movies_categories" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="200" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="movie* INT&lt;br&gt;category* INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="37" vertex="1">
+                    <mxGeometry x="20" y="30" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="515" y="550" as="sourcePoint"/>
+                        <mxPoint x="565" y="500" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="555" y="550"/>
+                            <mxPoint x="555" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

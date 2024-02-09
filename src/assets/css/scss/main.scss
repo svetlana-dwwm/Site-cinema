@@ -1,0 +1,151 @@
+// Colors 
+:root {
+    --primary-color: #2c3e50;
+    --active-color: #2c3e50;
+    --background-color: #2c3e50;
+    --default-color: #2c3e50;
+}
+
+// Fonts
+$title-font: 'Roboto', sans-serif;
+$default-font: 'Arial', sans-serif;
+
+
+// Imports
+@import '_reset';
+@import '_fonts';
+@import '_default';
+@import '_header';
+@import '_footer';
+@import '_home';
+@import '_contact';
+@import '_about';
+@import 'blog/category';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bdb2b2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px #9D9292;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+       }
+
+    li {
+        margin-right: 20px;
+    }
+
+    a {
+        font-family: 'Times New Roman', Times, serif;
+        color: #9D9292;
+        font-size: 40px;
+        text-decoration: none;
+    }
+
+    form {
+        padding: 20px;
+        background-color: #080707;
+    }
+
+    input {
+        padding: 10px;
+        background-color: #080707;
+        font-family: inherit;
+        border-radius: 20px;
+        font-size: 20px;
+        outline: none;
+
+        &:focus {
+            background-color: aliceblue;
+        }
+    }
+}
+
+.search {
+    padding: 10px;
+    background-color: #080707;
+    font-family: inherit;
+    border-radius: 20px;
+    font-size: 20px;
+    border-color: #9D9292;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 2px #9D9292;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 20px;
+
+    h4 {
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        font-size: 30px;
+        margin-bottom: 10px;
+
+    }
+
+    nav {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    ul {
+        list-style-type: none;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        color: #9D9292;
+    }
+
+    p {
+        color: #9D9292;
+    }
+
+    i {
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+.apps {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    button {
+        margin-bottom: 15px;
+        border-radius: 20px;
+        padding: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        background-color: #080707;
+        font-size: 18px;
+    }
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+}

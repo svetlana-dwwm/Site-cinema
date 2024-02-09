@@ -1,0 +1,18 @@
+RewriteEngine on
+
+# Remove end slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# We've moved index.php to the folder 'public', now we need to enter there for the 1st page
+# Redirect to public folder
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L]
+
+# Redirect to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]

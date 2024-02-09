@@ -1,0 +1,120 @@
+{% extends 'layouts/public.twig' %}
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div id="home">
+    <h1 class="title-main">Les films</h1>
+
+    <div id="movies">
+    {% for movie in movies %}
+    {% if not post.search or search(movie.title, post.search) %}	
+        <article>
+            <a href="{{ getUrl('details', {'slug': movie.slug}) }}">
+                <div>
+                    <img src="{{ movie.poster }}" alt="{{ movie.poster }}">
+                </div>
+                <h2>{{ movie.title }}</h2>
+            </a>
+        </article>
+         {% endif %}
+    {% endfor %} 
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+{#{% extends 'layouts/public.twig' %}
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div id="home">
+    <h1 class="title-main">Les films</h1>
+
+    <div id="movies">
+        {% for movie in movies %}
+            {% set foundMovie = showMovie([movie], search) %}
+            {% if foundMovie %}
+                <article>
+                    <a href="{{ getUrl('details', {'slug': foundMovie.slug}) }}">
+                        <div>
+                            <img src="{{ foundMovie.poster }}" alt="{{ foundMovie.poster }}">
+                        </div>
+                        <h2>{{ foundMovie.title }}</h2>
+                    </a>
+                </article>
+            {% else %}
+                <article>
+                    <a href="{{ getUrl('details', {'slug': movie.slug}) }}">
+                        <div>
+                            <img src="{{ movie.poster }}" alt="{{ movie.poster }}">
+                        </div>
+                        <h2>{{ movie.title }}</h2>
+                    </a>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#{% extends 'layouts/public.twig' %}
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div id="home">
+    <h1 class="title-main">Les films</h1>
+
+<div id="movies">
+        {% for movie in movies %}
+            {% if data.search %}
+                <article>
+                    <a href="{{ getUrl('details', {'slug': movie.slug}) }}">
+                        <div>
+                            <img src="{{ movie.poster }}" alt="{{ movie.poster }}">
+                        </div>
+                        <h2>{{ movie.title }}</h2>
+                    </a>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}#}
+
+
+
+
+   {#} <div id="movies">
+        {% for movie in movies %}
+            
+                <article>
+                    <a href="{{ getUrl('details', {'slug': movie.slug}) }}">
+                        <div>
+                            <img src="{{ movie.poster }}" alt="{{ movie.poster }}">
+                        </div>
+                        <h2>{{ movie.title }}</h2>
+                    </a>
+                </article>
+           
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}#}
+

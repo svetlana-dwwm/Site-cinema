@@ -1,0 +1,28 @@
+// Colors 
+:root {
+	--primary-color: #9D9292;
+	--active-color: white;
+	--background-color: #080707;
+	--default-color: #2c3e50;
+}
+
+// Fonts
+/*$title-font: 'Roboto', sans-serif;
+$default-font: "Times New Roman", Times, serif;  */     // Спросить, как использовать
+:root {
+	--default-font: "Times New Roman", Times, serif;
+}
+
+// Imports
+@import '_reset';
+@import '_mixins';
+@import '_default';
+// @import '_fonts';
+@import '_header';
+@import '_body';
+@import '_footer';
+// @import '_footer';
+// @import '_home';
+// @import '_contact';
+// @import '_about';
+// @import 'blog/category';

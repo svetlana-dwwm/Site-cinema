@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Movies</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://kit.fontawesome.com/71afcb8d76.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="{{ getUrl('home') }}">
+                <img src="/images/icons/logo-png.svg" alt="logo" id="logo">
+            </a>
+         </div>
+        <nav>
+            <ul>
+                <li><a href="">Catalogue</a></li>
+                <li><a href="">Films</a></li>
+                <li><a href="">Series</a></li>
+                <li><a href="">Nouveautés</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+                <form action="{{ getUrl('home') }}" method="post">
+                        <input type="search" placeholder="films, séries, personnes" name="search">
+                        <button type="submit"><img src="images/icons/search1.png"></button>
+                </form>
+        </div>
+  <button class="pulse">Essai gratuit</button>
+        <a href="{{ getUrl('login') }}">
+            <img class="link" src="/images/icons/account.svg" alt="">
+        </a>
+    </header>
+    <main class="wrapper">
+    {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div>
+            <nav>
+                <h4>Sections</h4>
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Catalogue</a></li>
+                    <li><a href="">Tickets cinéma</a></li>
+                    <li><a href="">Nouveautés</a></li>
+                    <li><a href="">Top</a></li>
+                    <li><a href="">Films</a></li>
+                    <li><a href="">Series</a></li>
+                </ul>
+                <a href="">
+                    <img src="/images/icons/iconfinder_question_sticker_68603.png" alt="">
+                </a>
+                <p>Copyright</p>
+            </nav>
+        </div>
+        <div>
+            <h4>Informations</h4>
+            <ul>
+                <li><a href="">Qui sommes-nous</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Support technique</a></li>
+                <li><a href="">Promotions et offres</a></li>
+                <li><a href="">Questions fréquentes</a></li>
+                <li><a href="">Politique de confidentialité</a></li>
+                <li><a href="">Règles de recommandation</a></li>
+                <li><a href="">Politique de cookies</a></li>
+                <li><a href="">Préférences cookies</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="apps">
+                <button>App Store</button>
+                <button>Google Play</button>
+                <button>Smart TV</button>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

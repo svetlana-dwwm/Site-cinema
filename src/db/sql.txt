@@ -1,0 +1,62 @@
+SCRIPT SQL
+
+CREATE table if not exists movie (
+    id INT AUTO_INCREMENT not null,
+    title VARCHAR(500),
+    thedate DATE,
+    time TINYINT,
+    description TEXT,
+    casting VARCHAR(1000),
+    direction VARCHAR(255),
+    note FLOAT,
+    poster VARCHAR (100),
+    trailer VARCHAR (100),
+    soft_delete BOOLEAN
+    created DATETIME
+    updated DATETIME
+    PRIMARY KEY (id)
+);
+
+CREATE table if not exists category (
+    id INT AUTO_INCREMENT not null,
+    name VARCHAR(100),
+    PRIMARY KEY (id)
+);
+
+CREATE table if not exists movie_category (
+    movie INT,
+    category INT,
+    PRIMARY KEY (movie, category),
+    FOREIGN KEY (movie) REFERENCES movie(id),
+    FOREIGN KEY (category) REFERENCES category(id)
+);
+
+CREATE table if not exists role (
+    id INT AUTO_INCREMENT not null,
+    name VARCHAR(12),
+    PRIMARY KEY (id)
+);
+
+CREATE table if not exists user (
+    id INT AUTO_INCREMENT not null,
+    nickname VARCHAR(50),
+    pwd TINYINT,
+    email VARCHAR(100),
+    age TINYINT,
+    rgpd BOOLEAN,
+    newsletters BOOLEAN,
+    cgu BOOLEAN,
+    role INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (role) REFERENCES role(id)
+);
+
+CREATE table if not exists comments (
+    id INT AUTO_INCREMENT not null,
+    comment TEXT,
+    movie INT,
+    user INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (movie) REFERENCES movie(id),
+    FOREIGN KEY (user) REFERENCES user(id)
+);

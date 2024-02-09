@@ -1,0 +1,30 @@
+{% extends '/layouts/public.twig' %}         {# WHY DON"T WE SEE THE SEARCH ICON ???? #}
+{% block title %}Détails du film {{ movie.title }}{% endblock %}
+
+{% block content %}
+<div id="details-movie">
+    <div class="poster">
+        <img src="/{{ movie.poster }}" alt="{{ movie.title }}">
+    </div>
+    <div class="details">
+        <h1 class="title-main">{{ movie.title }}</h1>
+
+        <ul>
+            <li><span>Date de sortie : </span>{{ movie.date|date('d-m-Y') }}</li>
+            <li><span>Durée : </span>{{ movie.time|date('H:i:s') }}</li>
+            <li><span>Catégories : </span>{{ movie.category_names }}</li>
+            <li><span>Casting : </span>{{ movie.casting }}</li>
+            <li><span>Réalisateur : </span>{{ movie.direction }}</li>
+            <li class="note-press"><span>Note de la presse : </span>{{ movie.note }} / 10</li>
+        </ul>
+
+        <p class="limit">{{ movie.description }}</p>
+    </div>
+    <div id="trailer">
+            <iframe width="560" height="315" src="{{ movie.trailer }}" title="{{ movie.title }} Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+{% endblock %}
+
+
+ 
